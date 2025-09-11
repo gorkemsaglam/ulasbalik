@@ -279,7 +279,132 @@
             </div>
         </section>
     <!-- Hakkımızda Alanı Bitiş -->
-    </div>
+    <div style="max-width: 700px; margin: 32px auto 0 auto; text-align: center;">
+        <h2 style="color: #0d47a1; font-size: 2.1rem; font-weight: 600; letter-spacing: 0.5px; margin: 0 0 0.18rem 0; text-align: center; font-family: 'Dancing Script', cursive;">Ulaş Balıkçılık Menü</h2>
+    <div style="width: 70px; height: 4px; background: linear-gradient(90deg, #0d47a1 60%, #e3eaf5 100%); border-radius: 2px; margin: 0.18rem auto 0.5rem auto;"></div>
+        <div class="menu-grid">
+            <div class="menu-card" id="tavalar-card" style="background-image: url('tavalar.jpg'); background-size: cover; background-position: center;">
+                <span class="menu-card-title">Tavalar (Pans)</span>
+            </div>
+            <div class="menu-card" id="izgaralar-card" style="background-image: url('ızgaralar.jpeg'); background-size: cover; background-position: center;">
+                <span class="menu-card-title">Izgaralar (Grills)</span>
+            </div>
+            <div class="menu-card" id="corbalar-card" style="background-image: url('corba.jpg'); background-size: cover; background-position: center;">
+                <span class="menu-card-title">Çorbalar (Soups)</span>
+            </div>
+            <div class="menu-card" id="ekmek-card" style="background-image: url('ekmek.jpg'); background-size: cover; background-position: center;">
+                <span class="menu-card-title">Ekmek Arası (Break)</span>
+            </div>
+            <div class="menu-card" id="salatalar-card" style="background-image: url('salata.jpg'); background-size: cover; background-position: center;">
+                <span class="menu-card-title">Salatalar (Salads)</span>
+            </div>
+            <div class="menu-card" id="mezeler-card" style="background-image: url('mezeler.jpeg'); background-size: cover; background-position: center;">
+                <span class="menu-card-title">Mezeler (Appetizers)</span>
+            </div>
+            <div class="menu-card" id="tatlilar-card" style="background-image: url('tatlılar.jpg'); background-size: cover; background-position: center;">
+                <span class="menu-card-title">Tatlılar (Desserts)</span>
+            </div>
+            <div class="menu-card" id="icecekler-card" style="background-image: url('icecekler.jpg'); background-size: cover; background-position: center;">
+                <span class="menu-card-title">İçecekler (Drinks)</span>
+            </div>
+        </div>
+        <!-- Menü dropdown'ları doğrudan burada, ana kapsayıcı olmadan -->
+        <div id="tavalar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Hamsi Tava</span>
+                <span class="menu-dropdown-price">180 TL</span>
+                <div class="menu-dropdown-desc">Taze hamsi, mısır unuyla pane, çıtır tavada pişirilmiş.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Palamut Tava</span>
+                <span class="menu-dropdown-price">220 TL</span>
+                <div class="menu-dropdown-desc">Mevsiminde palamut, özel sos ile tavada kızartılmış.</div>
+            </div>
+        </div>
+        <div id="izgaralar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Levrek Izgara</span>
+                <span class="menu-dropdown-price">250 TL</span>
+                <div class="menu-dropdown-desc">Taze levrek, közde ızgara, yanında roka ve limon.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Çipura Izgara</span>
+                <span class="menu-dropdown-price">240 TL</span>
+                <div class="menu-dropdown-desc">Izgarada pişmiş çipura, taptaze sunum.</div>
+            </div>
+        </div>
+        <div id="corbalar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Balık Çorbası</span>
+                <span class="menu-dropdown-price">120 TL</span>
+                <div class="menu-dropdown-desc">Taze balıklarla hazırlanan özel çorba.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Mercimek Çorbası</span>
+                <span class="menu-dropdown-price">70 TL</span>
+                <div class="menu-dropdown-desc">Klasik kırmızı mercimek çorbası.</div>
+            </div>
+        </div>
+        <div id="ekmek-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Balık Ekmek</span>
+                <span class="menu-dropdown-price">110 TL</span>
+                <div class="menu-dropdown-desc">Izgara balık, taze ekmek arasında, bol yeşillik ile.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Köfte Ekmek</span>
+                <span class="menu-dropdown-price">90 TL</span>
+                <div class="menu-dropdown-desc">Ev yapımı köfte, taze ekmek arasında, domates ve biber ile.</div>
+            </div>
+        </div>
+        <div id="salatalar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Mevsim Salata</span>
+                <span class="menu-dropdown-price">60 TL</span>
+                <div class="menu-dropdown-desc">Taze yeşilliklerle hazırlanan mevsim salatası.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Çoban Salata</span>
+                <span class="menu-dropdown-price">55 TL</span>
+                <div class="menu-dropdown-desc">Domates, salatalık, biber, soğan ve maydanoz ile.</div>
+            </div>
+        </div>
+        <div id="mezeler-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Haydari</span>
+                <span class="menu-dropdown-price">45 TL</span>
+                <div class="menu-dropdown-desc">Yoğurt, sarımsak ve dereotu ile hazırlanan meze.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Patlıcan Salatası</span>
+                <span class="menu-dropdown-price">50 TL</span>
+                <div class="menu-dropdown-desc">Közlenmiş patlıcan, zeytinyağı ve baharatlarla.</div>
+            </div>
+        </div>
+        <div id="tatlilar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Fırın Sütlaç</span>
+                <span class="menu-dropdown-price">55 TL</span>
+                <div class="menu-dropdown-desc">Klasik fırınlanmış sütlaç, tarçın ile servis.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Baklava</span>
+                <span class="menu-dropdown-price">70 TL</span>
+                <div class="menu-dropdown-desc">Cevizli geleneksel baklava.</div>
+            </div>
+        </div>
+        <div id="icecekler-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Ayran</span>
+                <span class="menu-dropdown-price">25 TL</span>
+                <div class="menu-dropdown-desc">Soğuk ve taze ayran.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Şalgam</span>
+                <span class="menu-dropdown-price">30 TL</span>
+                <div class="menu-dropdown-desc">Acılı veya acısız şalgam suyu.</div>
+            </div>
+        </div>
 </body>
 <style>
 /* Açılışta fade-in animasyonu */
@@ -332,7 +457,145 @@
     .hero-lezzet { margin-bottom: 0.04em !important; }
     .hero-zamani { margin-top: -0.12em !important; }
 }
+/* Menü Grid/Kart Tasarımı - Görsel odaklı ve estetik */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 22px;
+    margin: 32px 0 0 0;
+    justify-items: center;
+}
+.menu-card {
+    background: linear-gradient(135deg, #f7fbfd 60%, #e3eaf5 100%);
+    border: 2px solid #e3eaf5;
+    border-radius: 22px;
+        box-shadow: 0 2px 16px rgba(13, 71, 161, 0.08);
+    padding: 16px 10px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: box-shadow 0.22s, border-color 0.22s, transform 0.18s;
+    min-width: 130px;
+    min-height: 120px;
+    position: relative;
+    overflow: hidden;
+}
+.menu-card:hover {
+    box-shadow: 0 8px 32px rgba(13,71,161,0.13);
+    border-color: #0d47a1;
+    transform: translateY(-4px) scale(1.045);
+    background: linear-gradient(135deg, #e3eaf5 60%, #f7fbfd 100%);
+}
+.menu-card-title {
+    font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    margin: 0 auto;
+    text-shadow: 0 2px 8px #000a, 0 1px 4px #23232399;
+    background: rgba(0,0,0,0.18);
+    border: none;
+    border-radius: 6px;
+    padding: 4px 10px 4px 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .menu-card {
+        min-width: 90px;
+        min-height: 80px;
+        padding: 10px 2px 6px 2px;
+    }
+    .menu-card-title {
+        font-size: 1.05rem;
+        padding: 2px 6px;
+    }
+}
+/* Açılır menü stilleri */
+.menu-dropdown {
+    background: #fff;
+    border: 2px solid #e3eaf5;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(13,71,161,0.06);
+    padding: 18px 18px 10px 18px;
+    margin-top: 8px;
+}
+.menu-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e3eaf5;
+    padding-bottom: 10px;
+}
+.menu-dropdown-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.menu-dropdown-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: #0d47a1;
+}
+.menu-dropdown-price {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.01rem;
+    font-weight: 600;
+    color: #1565c0;
+    margin-left: 8px;
+}
+.menu-dropdown-desc {
+    font-size: 0.97rem;
+    color: #232323;
+    margin-top: 2px;
+}
 </style>
+<script>
+// Her kart tıklandığında sadece ilgili menü açılır, diğerleri kapanır
+document.addEventListener('DOMContentLoaded', function() {
+    const cardMenuMap = [
+        { card: 'tavalar-card', menu: 'tavalar-menu' },
+        { card: 'izgaralar-card', menu: 'izgaralar-menu' },
+        { card: 'corbalar-card', menu: 'corbalar-menu' },
+        { card: 'ekmek-card', menu: 'ekmek-menu' },
+        { card: 'salatalar-card', menu: 'salatalar-menu' },
+        { card: 'mezeler-card', menu: 'mezeler-menu' },
+        { card: 'tatlilar-card', menu: 'tatlilar-menu' },
+        { card: 'icecekler-card', menu: 'icecekler-menu' }
+    ];
+    cardMenuMap.forEach(function(pair) {
+        var card = document.getElementById(pair.card);
+        var menu = document.getElementById(pair.menu);
+        if(card && menu) {
+            card.addEventListener('click', function() {
+                // Tüm menüleri kapat
+                cardMenuMap.forEach(function(other) {
+                    var otherMenu = document.getElementById(other.menu);
+                    var otherCard = document.getElementById(other.card);
+                    if(otherMenu) otherMenu.style.display = 'none';
+                    if(otherCard) otherCard.classList.remove('active');
+                });
+                // Sadece ilgili menüyü aç
+                menu.style.display = 'block';
+                card.classList.add('active');
+            });
+        }
+    });
+});
+</script>
 <script>
 // Açılışta animasyon için (göz yormayan fade-in)
 window.addEventListener('DOMContentLoaded', function() {
