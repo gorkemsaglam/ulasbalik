@@ -211,11 +211,46 @@
     </style>
 </head>
 <body style="background: #f7fbfd;">
-    <header style="background: #232323; color: #fff; padding: 1.2rem 0;">
-        <div class="header-flex">
-            <span class="header-reserve">Rezarvasyonlarınız için: <strong>(0539) 958 1843</strong></span>
-            <span class="header-title"></span>
+    <header style="background: #fff; color: #0d47a1; padding: 1.2rem 0; box-shadow: 0 2px 12px rgba(13,71,161,0.06);">
+        <div class="header-flex" style="justify-content: center;">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Ulaş Balıkçılık Logo" class="logo-img" />
+            </div>
         </div>
+<style>
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    max-width: 90px;
+    margin: 0 auto;
+    transition: none;
+    position: relative;
+}
+.logo-img {
+    height: 72px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.18s;
+}
+.logo-container:hover .logo-img {
+    transform: scale(1.07);
+}
+@media (max-width: 600px) {
+    .logo-container {
+        max-width: 64px;
+    }
+    .logo-img {
+        height: 48px;
+    }
+}
+</style>
     </header>
     <!-- sub-header ve hamburger menü kaldırıldı -->
     <!-- Açılır Menü: gri alanın altından başlar, görselin üstünde biter -->
@@ -239,9 +274,26 @@
                 <span class="hero-zamani" style="font-family: 'Archivo Black', 'Oswald', Arial, sans-serif; font-size: 2.2rem; font-weight: 900; letter-spacing: 2.5px; color: #fff; text-shadow: 0 2px 12px rgba(13,71,161,0.18), 0 2px 8px rgba(0,0,0,0.18); position: relative; display: inline-block; line-height: 1.05; filter: drop-shadow(0 0 10px #fff6) brightness(1.12); margin-top: -0.18em;">
                     ZAMANI
                 </span>
-                <span class="hero-slogan" style="font-family: 'Dancing Script', cursive; font-size: 1.18rem; color: #fff; margin-top: 0.5rem; text-shadow: 0 2px 8px #0d47a1a0, 0 1px 4px #fff8; background: rgba(13,71,161,0.10); border-radius: 12px; padding: 0.12em 1.1em; letter-spacing: 0.5px; font-weight: 500;">Her zaman Tazeliğin ve lezzetin buluşma noktası</span>
+                <span class="hero-slogan" style="font-family: 'Dancing Script', cursive; font-size: 1.18rem; color: #fff; margin-top: 0.5rem; text-shadow: 0 2px 8px #0d47a1a0, 0 1px 4px #fff8; background: rgba(13,71,161,0.10); border-radius: 12px; padding: 0.12em 1.1em; letter-spacing: 0.5px; font-weight: 500;">Her zaman tazeliğin ve lezzetin buluşma noktası</span>
             </div>
             <a href="#menu" class="hero-menu-btn" style="background: rgba(255,255,255,0.12); color: #fff; border: 2px solid #fff; font-weight: 700; padding: 0.7rem 2.2rem; border-radius: 32px; font-size: 1.1rem; text-decoration: none; margin-top: 1.1rem; box-shadow: 0 2px 8px rgba(13,71,161,0.08); transition: background 0.2s, color 0.2s;">Menümüz</a>
+<script>
+// Menümüz butonuna tıklandığında menü başlığına tam olarak en üstte olacak şekilde scroll
+document.addEventListener('DOMContentLoaded', function() {
+    var menuBtn = document.querySelector('.hero-menu-btn');
+    if(menuBtn) {
+        menuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            var menuTitle = Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.includes('Ulaş Balıkçılık Menü'));
+            if(menuTitle) {
+                // Sayfanın tam üstüne hizalamak için offset hesapla
+                var y = menuTitle.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        });
+    }
+});
+</script>
         </div>
     </div>
         <!-- Hakkımızda Alanı Başlangıç -->
@@ -310,30 +362,83 @@
         </div>
         <!-- Menü dropdown'ları doğrudan burada, ana kapsayıcı olmadan -->
         <div id="tavalar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-header menu-dropdown-header-design">Tavalar</div>
             <div class="menu-dropdown-item">
-                <span class="menu-dropdown-title">Hamsi Tava</span>
+                <span class="menu-dropdown-title">Hamsi Tava <span class="menu-en">(Fried Anchovy)</span></span>
                 <span class="menu-dropdown-price">180 TL</span>
-                <div class="menu-dropdown-desc">Taze hamsi, mısır unuyla pane, çıtır tavada pişirilmiş.</div>
+                <div class="menu-dropdown-desc"><em>Taze hamsi, mısır unuyla pane, çıtır tavada pişirilmiş.</em></div>
             </div>
             <div class="menu-dropdown-item">
-                <span class="menu-dropdown-title">Palamut Tava</span>
+                <span class="menu-dropdown-title">Palamut Tava <span class="menu-en">(Fried Bonito)</span></span>
                 <span class="menu-dropdown-price">220 TL</span>
-                <div class="menu-dropdown-desc">Mevsiminde palamut, özel sos ile tavada kızartılmış.</div>
+                <div class="menu-dropdown-desc"><em>Mevsiminde palamut, özel sos ile tavada kızartılmış.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">İstavrit Tava <span class="menu-en">(Fried Horse Mackerel)</span></span>
+                <span class="menu-dropdown-price">170 TL</span>
+                <div class="menu-dropdown-desc"><em>Taze istavrit, mısır unu ile pane, çıtır tavada pişirilmiş.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Mezgit Tava <span class="menu-en">(Fried Whiting)</span></span>
+                <span class="menu-dropdown-price">200 TL</span>
+                <div class="menu-dropdown-desc"><em>Mezgit fileto, hafif baharatlı, çıtır tavada pişmiş.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Barbun Tava <span class="menu-en">(Fried Red Mullet)</span></span>
+                <span class="menu-dropdown-price">240 TL</span>
+                <div class="menu-dropdown-desc"><em>Barbun balığı, mısır unu ile pane, taze yağda kızartılmış.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Kalkan Tava <span class="menu-en">(Fried Turbot)</span></span>
+                <span class="menu-dropdown-price">350 TL</span>
+                <div class="menu-dropdown-desc"><em>Kalkan balığı dilimleri, özel sos ile tavada pişirilmiş.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Çinekop Tava <span class="menu-en">(Fried Bluefish)</span></span>
+                <span class="menu-dropdown-price">260 TL</span>
+                <div class="menu-dropdown-desc"><em>Taze çinekop, çıtır tavada, yanında roka ve limon ile.</em></div>
             </div>
         </div>
         <div id="izgaralar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-header menu-dropdown-header-design">Izgaralar</div>
             <div class="menu-dropdown-item">
-                <span class="menu-dropdown-title">Levrek Izgara</span>
+                <span class="menu-dropdown-title">Levrek Izgara <span class="menu-en">(Grilled Sea Bass)</span></span>
                 <span class="menu-dropdown-price">250 TL</span>
-                <div class="menu-dropdown-desc">Taze levrek, közde ızgara, yanında roka ve limon.</div>
+                <div class="menu-dropdown-desc"><em>Taze levrek, közde ızgara, yanında roka ve limon.</em></div>
             </div>
             <div class="menu-dropdown-item">
-                <span class="menu-dropdown-title">Çipura Izgara</span>
+                <span class="menu-dropdown-title">Çipura Izgara <span class="menu-en">(Grilled Gilthead Bream)</span></span>
                 <span class="menu-dropdown-price">240 TL</span>
-                <div class="menu-dropdown-desc">Izgarada pişmiş çipura, taptaze sunum.</div>
+                <div class="menu-dropdown-desc"><em>Izgarada pişmiş çipura, taptaze sunum.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Somon Izgara <span class="menu-en">(Grilled Salmon)</span></span>
+                <span class="menu-dropdown-price">270 TL</span>
+                <div class="menu-dropdown-desc"><em>Norveç somonu, közde ızgara, limon ve tereyağı ile.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Uskumru Izgara <span class="menu-en">(Grilled Mackerel)</span></span>
+                <span class="menu-dropdown-price">210 TL</span>
+                <div class="menu-dropdown-desc"><em>Taze uskumru, közde ızgara, yanında soğan salatası.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Alabalık Izgara <span class="menu-en">(Grilled Trout)</span></span>
+                <span class="menu-dropdown-price">200 TL</span>
+                <div class="menu-dropdown-desc"><em>Tereyağında ızgara alabalık, taze otlarla servis.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Karides Izgara <span class="menu-en">(Grilled Shrimp)</span></span>
+                <span class="menu-dropdown-price">320 TL</span>
+                <div class="menu-dropdown-desc"><em>Izgarada karides, sarımsaklı tereyağı sos ile.</em></div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Köfte Izgara <span class="menu-en">(Grilled Meatballs)</span></span>
+                <span class="menu-dropdown-price">120 TL</span>
+                <div class="menu-dropdown-desc"><em>Ev yapımı köfte, közde ızgara, yanında domates ve biber.</em></div>
             </div>
         </div>
         <div id="corbalar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-header menu-dropdown-header-design">Çorbalar</div>
             <div class="menu-dropdown-item">
                 <span class="menu-dropdown-title">Balık Çorbası</span>
                 <span class="menu-dropdown-price">120 TL</span>
@@ -344,8 +449,29 @@
                 <span class="menu-dropdown-price">70 TL</span>
                 <div class="menu-dropdown-desc">Klasik kırmızı mercimek çorbası.</div>
             </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Ezogelin Çorbası</span>
+                <span class="menu-dropdown-price">75 TL</span>
+                <div class="menu-dropdown-desc">Bulgur, mercimek ve baharatlarla hazırlanan yöresel çorba.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Domates Çorbası</span>
+                <span class="menu-dropdown-price">70 TL</span>
+                <div class="menu-dropdown-desc">Taze domates ve kaşar peyniri ile servis edilen çorba.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Sebze Çorbası</span>
+                <span class="menu-dropdown-price">80 TL</span>
+                <div class="menu-dropdown-desc">Mevsim sebzeleriyle hazırlanan hafif çorba.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Tavuk Çorbası</span>
+                <span class="menu-dropdown-price">85 TL</span>
+                <div class="menu-dropdown-desc">Tavuk eti ve taze sebzelerle yapılan klasik çorba.</div>
+            </div>
         </div>
         <div id="ekmek-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-header menu-dropdown-header-design">Ekmek Arası</div>
             <div class="menu-dropdown-item">
                 <span class="menu-dropdown-title">Balık Ekmek</span>
                 <span class="menu-dropdown-price">110 TL</span>
@@ -356,8 +482,29 @@
                 <span class="menu-dropdown-price">90 TL</span>
                 <div class="menu-dropdown-desc">Ev yapımı köfte, taze ekmek arasında, domates ve biber ile.</div>
             </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Sucuk Ekmek</span>
+                <span class="menu-dropdown-price">85 TL</span>
+                <div class="menu-dropdown-desc">Közde pişmiş sucuk, taze ekmek arasında.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Tavuk Ekmek</span>
+                <span class="menu-dropdown-price">95 TL</span>
+                <div class="menu-dropdown-desc">Izgara tavuk, taze ekmek arasında, yeşillik ile.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Kaşarlı Balık Ekmek</span>
+                <span class="menu-dropdown-price">120 TL</span>
+                <div class="menu-dropdown-desc">Izgara balık, kaşar peyniri ile, taze ekmek arasında.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Patatesli Ekmek</span>
+                <span class="menu-dropdown-price">70 TL</span>
+                <div class="menu-dropdown-desc">Kızarmış patates, taze ekmek arasında, ketçap ve mayonez ile.</div>
+            </div>
         </div>
         <div id="salatalar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-header menu-dropdown-header-design">Salatalar</div>
             <div class="menu-dropdown-item">
                 <span class="menu-dropdown-title">Mevsim Salata</span>
                 <span class="menu-dropdown-price">60 TL</span>
@@ -368,8 +515,29 @@
                 <span class="menu-dropdown-price">55 TL</span>
                 <div class="menu-dropdown-desc">Domates, salatalık, biber, soğan ve maydanoz ile.</div>
             </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Roka Salata</span>
+                <span class="menu-dropdown-price">65 TL</span>
+                <div class="menu-dropdown-desc">Taze roka, limon ve zeytinyağı ile hazırlanmış.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Akdeniz Salata</span>
+                <span class="menu-dropdown-price">70 TL</span>
+                <div class="menu-dropdown-desc">Akdeniz yeşillikleri, cherry domates ve zeytin ile.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Ton Balıklı Salata</span>
+                <span class="menu-dropdown-price">90 TL</span>
+                <div class="menu-dropdown-desc">Ton balığı, mısır, yeşillik ve limon sos ile.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Peynirli Salata</span>
+                <span class="menu-dropdown-price">80 TL</span>
+                <div class="menu-dropdown-desc">Beyaz peynir, domates, salatalık ve yeşillik ile.</div>
+            </div>
         </div>
         <div id="mezeler-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-header menu-dropdown-header-design">Mezeler</div>
             <div class="menu-dropdown-item">
                 <span class="menu-dropdown-title">Haydari</span>
                 <span class="menu-dropdown-price">45 TL</span>
@@ -380,8 +548,34 @@
                 <span class="menu-dropdown-price">50 TL</span>
                 <div class="menu-dropdown-desc">Közlenmiş patlıcan, zeytinyağı ve baharatlarla.</div>
             </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Rus Salatası</span>
+                <span class="menu-dropdown-price">55 TL</span>
+                <div class="menu-dropdown-desc">Bezelye, havuç, patates ve mayonez ile hazırlanan klasik meze.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Şakşuka</span>
+                <span class="menu-dropdown-price">50 TL</span>
+                <div class="menu-dropdown-desc">Kızarmış patlıcan, biber ve domates sosu ile.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Fava</span>
+                <span class="menu-dropdown-price">48 TL</span>
+                <div class="menu-dropdown-desc">Bakla ezmesi, zeytinyağı ve dereotu ile.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Cacık</span>
+                <span class="menu-dropdown-price">40 TL</span>
+                <div class="menu-dropdown-desc">Yoğurt, salatalık, nane ve zeytinyağı ile serinletici meze.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Havuç Tarator</span>
+                <span class="menu-dropdown-price">45 TL</span>
+                <div class="menu-dropdown-desc">Havuç, yoğurt ve ceviz ile hazırlanan hafif meze.</div>
+            </div>
         </div>
         <div id="tatlilar-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-header menu-dropdown-header-design">Tatlılar</div>
             <div class="menu-dropdown-item">
                 <span class="menu-dropdown-title">Fırın Sütlaç</span>
                 <span class="menu-dropdown-price">55 TL</span>
@@ -392,8 +586,81 @@
                 <span class="menu-dropdown-price">70 TL</span>
                 <div class="menu-dropdown-desc">Cevizli geleneksel baklava.</div>
             </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Kazandibi</span>
+                <span class="menu-dropdown-price">60 TL</span>
+                <div class="menu-dropdown-desc">Karamelize tabanlı geleneksel sütlü tatlı.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">İrmik Helvası</span>
+                <span class="menu-dropdown-price">50 TL</span>
+                <div class="menu-dropdown-desc">Tereyağında kavrulmuş irmik, dondurma ile servis.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Ayva Tatlısı</span>
+                <span class="menu-dropdown-price">65 TL</span>
+                <div class="menu-dropdown-desc">Fırında pişmiş ayva, kaymak ve ceviz ile.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Profiterol</span>
+                <span class="menu-dropdown-price">70 TL</span>
+                <div class="menu-dropdown-desc">Çikolata soslu profiterol, bol krema ile.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Revani</span>
+                <span class="menu-dropdown-price">55 TL</span>
+                <div class="menu-dropdown-desc">Şerbetli irmik tatlısı, limon aromalı.</div>
+            </div>
         </div>
         <div id="icecekler-menu" class="menu-dropdown" style="display:none; max-width:420px; margin:18px auto 0 auto; text-align:left;">
+            <div class="menu-dropdown-header menu-dropdown-header-design">İçecekler</div>
+<style>
+/* Menü başlıkları el yazısı, bordersız ve altı çizgili */
+.menu-dropdown-header-design {
+    font-family: 'Archivo Black', 'Oswald', Arial, sans-serif;
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: #0d47a1;
+    text-align: center;
+    margin: 0 auto 0.18rem auto;
+    letter-spacing: 1.2px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    text-shadow: 0 2px 8px #e3eaf5, 0 1px 4px #fff8;
+    position: relative;
+    display: block;
+}
+.menu-dropdown-header-design::after {
+    content: '';
+    display: block;
+    margin: 0.18rem auto 1.1rem auto;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, #0d47a1 60%, #e3eaf5 100%);
+    border-radius: 2px;
+}
+@media (max-width: 600px) {
+    .menu-dropdown-header-design {
+        font-size: 1.35rem;
+        letter-spacing: 0.7px;
+    }
+    .menu-dropdown-header-design::after {
+        width: 36px;
+        height: 2px;
+        margin-bottom: 0.7rem;
+    }
+}
+@media (max-width: 600px) {
+    .menu-dropdown-header-design {
+        font-size: 1.25rem;
+        padding: 0 8px 4px 8px;
+        margin-bottom: 10px;
+    }
+}
+</style>
             <div class="menu-dropdown-item">
                 <span class="menu-dropdown-title">Ayran</span>
                 <span class="menu-dropdown-price">25 TL</span>
@@ -404,7 +671,195 @@
                 <span class="menu-dropdown-price">30 TL</span>
                 <div class="menu-dropdown-desc">Acılı veya acısız şalgam suyu.</div>
             </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Kola</span>
+                <span class="menu-dropdown-price">35 TL</span>
+                <div class="menu-dropdown-desc">Buz gibi kutu kola.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Fanta</span>
+                <span class="menu-dropdown-price">35 TL</span>
+                <div class="menu-dropdown-desc">Portakal aromalı gazlı içecek.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Soda</span>
+                <span class="menu-dropdown-price">20 TL</span>
+                <div class="menu-dropdown-desc">Doğal maden suyu.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Su</span>
+                <span class="menu-dropdown-price">15 TL</span>
+                <div class="menu-dropdown-desc">Pet şişe su.</div>
+            </div>
+            <div class="menu-dropdown-item">
+                <span class="menu-dropdown-title">Çay</span>
+                <span class="menu-dropdown-price">15 TL</span>
+                <div class="menu-dropdown-desc">Taze demlenmiş ince belli bardakta çay.</div>
+            </div>
         </div>
+        <!-- Modern İletişim Alanı Başlangıç -->
+        <section id="iletisim-alani" class="iletisim-section">
+            <div class="iletisim-container">
+                <h2 class="iletisim-title"><i class="fa-solid fa-paper-plane"></i> İletişim</h2>
+                <div class="iletisim-divider"></div>
+                <div class="iletisim-content">
+                    <div class="iletisim-info">
+                        <div class="iletisim-row">
+                                            <span class="iletisim-label"><i class="fa-solid fa-location-dot"></i> Adres</span>
+                            <span class="iletisim-value">Yalı Mah. Sahil Cad. No:12, 61200 Ortahisar/Trabzon</span>
+                        </div>
+                        <div class="iletisim-row">
+                                            <span class="iletisim-label"><i class="fa-solid fa-phone"></i> Telefon</span>
+                            <a class="iletisim-value" href="tel:+904622223344">(0462) 222 33 44</a>
+                        </div>
+                        <div class="iletisim-row iletisim-row-email">
+                                            <span class="iletisim-label"><i class="fa-solid fa-envelope"></i> E-posta</span>
+                            <a class="iletisim-value" href="mailto:ulasbalikcilik@gmail.com">ulasbalikcilik@gmail.com</a>
+                        </div>
+                                        <div class="iletisim-row iletisim-row-instagram">
+                                            <span class="iletisim-label"><i class="fa-brands fa-instagram"></i> Instagram</span>
+                                            <a class="iletisim-value" href="https://instagram.com/ulasbalikcilik" target="_blank">@ulasbalikcilik</a>
+                                        </div>
+                    </div>
+                    <div class="iletisim-map">
+                        <iframe src="https://www.google.com/maps?q=Yalı+Mah.+Sahil+Cad.+No:12,+Ortahisar,+Trabzon&output=embed" width="100%" height="180" style="border:0; border-radius:16px; box-shadow:0 2px 16px rgba(13,71,161,0.10);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+        .iletisim-section {
+            max-width: 700px;
+            margin: 38px auto 0 auto;
+            background: #fff;
+            border: 1.5px solid #e3eaf5;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(13,71,161,0.06);
+            padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .iletisim-title {
+            color: #0d47a1;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            margin: 0 0 0.18rem 0;
+            text-align: center;
+            font-family: 'Archivo Black', 'Oswald', Arial, sans-serif;
+            text-shadow: 0 2px 8px #e3eaf5, 0 1px 4px #fff8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .iletisim-divider {
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(90deg, #0d47a1 60%, #e3eaf5 100%);
+            border-radius: 2px;
+            margin: 0.18rem auto 1.1rem auto;
+        }
+        .iletisim-content {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            width: 100%;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+        .iletisim-row {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            align-items: center;
+            font-size: 1.13rem;
+            background: none;
+            border-radius: 0;
+            padding: 6px 0 6px 0;
+            margin-bottom: 0;
+            box-shadow: none;
+            border: none;
+            align-items: center;
+            font-size: 1.13rem;
+            background: #f7fbfd;
+            border-radius: 10px;
+            padding: 8px 14px;
+            margin-bottom: 2px;
+            box-shadow: 0 2px 8px rgba(13,71,161,0.04);
+        }
+        .iletisim-row-email {
+            margin-bottom: 0;
+        }
+        .iletisim-label {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            align-items: center;
+            font-size: 1.13rem;
+            background: #f7fbfd;
+            border-radius: 10px;
+            padding: 6px 10px 6px 10px;
+            margin-bottom: 0;
+            box-shadow: 0 2px 8px rgba(13,71,161,0.04);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.18s;
+            font-size: 1.05em;
+            word-break: break-all;
+        }
+        .iletisim-value:hover {
+            color: #1565c0;
+            text-decoration: underline;
+        }
+        .iletisim-map {
+            flex: 1 1 220px;
+            min-width: 180px;
+            max-width: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 900px) {
+            .iletisim-content {
+                flex-direction: column;
+                gap: 2px;
+                align-items: stretch;
+            }
+            .iletisim-map {
+                max-width: 100%;
+                min-width: 0;
+            }
+        }
+        @media (max-width: 600px) {
+            .iletisim-section {
+                padding: 0.7rem 0.5rem 1.1rem 0.5rem;
+                border-radius: 12px;
+            }
+            .iletisim-title {
+                font-size: 1.45rem;
+            }
+            .iletisim-divider {
+                width: 32px;
+                height: 2px;
+                margin-bottom: 0.7rem;
+            }
+            .iletisim-content {
+                flex-direction: column;
+                gap: 1px;
+            }
+            .iletisim-info {
+                gap: 1px;
+            }
+            .iletisim-row {
+                font-size: 0.98rem;
+                padding: 6px 7px;
+            }
+        }
+        /* FontAwesome CDN */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+        </style>
 </body>
 <style>
 /* Açılışta fade-in animasyonu */
@@ -500,7 +955,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 16px;
+    bottom: 6px;
     margin: 0 auto;
     text-shadow: 0 2px 8px #000a, 0 1px 4px #23232399;
     background: rgba(0,0,0,0.18);
@@ -525,8 +980,8 @@
         overflow-x: auto;
         gap: 12px;
         padding-bottom: 8px;
-        margin-left: -8px;
-        margin-right: -8px;
+        margin-left: 0;
+        margin-right: 0;
         width: 100vw;
         box-sizing: border-box;
         justify-content: flex-start;
@@ -543,9 +998,16 @@
         padding: 10px 2px 6px 2px;
         border-radius: 18px;
     }
+    .menu-card:first-child {
+        margin-left: 16px;
+    }
+    .menu-card:last-child {
+        margin-right: 16px;
+    }
     .menu-card-title {
         font-size: 1.05rem;
         padding: 2px 6px;
+        bottom: 4px !important;
     }
     /* Scrollbar görünümü */
     .menu-grid::-webkit-scrollbar {
@@ -566,36 +1028,117 @@
     padding: 18px 18px 10px 18px;
     margin-top: 8px;
 }
+/* Modern ürün kartı stili */
+/* Estetik ve dikkat çekici ürün kartı */
 .menu-dropdown-item {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    margin-bottom: 14px;
-    border-bottom: 1px solid #e3eaf5;
-    padding-bottom: 10px;
+    gap: 0;
+    margin-bottom: 22px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(13,71,161,0.10);
+    border: none;
+    padding: 0 0 0 0;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.22s, transform 0.18s;
+}
+.menu-dropdown-item:hover {
+    box-shadow: 0 8px 32px rgba(13,71,161,0.13);
+    transform: translateY(-2px) scale(1.012);
 }
 .menu-dropdown-item:last-child {
-    border-bottom: none;
     margin-bottom: 0;
-    padding-bottom: 0;
+}
+.menu-dropdown-title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 12px;
+    padding: 18px 22px 0 22px;
+    min-height: 48px;
 }
 .menu-dropdown-title {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 1.08rem;
-    font-weight: 700;
+    font-family: 'Archivo Black', 'Oswald', Arial, sans-serif;
+    font-size: 1.22rem;
+    font-weight: 900;
     color: #0d47a1;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px #e3eaf5;
+    word-break: break-word;
+    line-height: 1.1;
+    margin-right: 10px;
 }
 .menu-dropdown-price {
     font-family: 'Inter', Arial, sans-serif;
-    font-size: 1.01rem;
+    font-size: 1.13rem;
     font-weight: 600;
     color: #1565c0;
-    margin-left: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 0;
+    box-shadow: none;
+    min-width: unset;
+    text-align: left;
+    letter-spacing: 0.2px;
+    position: relative;
+    top: 1px;
 }
 .menu-dropdown-desc {
-    font-size: 0.97rem;
-    color: #232323;
-    margin-top: 2px;
+    font-size: 1.01rem;
+    color: #3a4a5a;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 400;
+    opacity: 0.92;
+    margin: 7px 22px 18px 22px;
+    line-height: 1.6;
+    border-top: 1px solid #e3eaf5;
+    padding-top: 7px;
+    background: none;
+}
+@media (max-width: 600px) {
+    .menu-dropdown-item {
+        border-radius: 10px;
+        margin-bottom: 14px;
+    }
+    .menu-dropdown-title-row {
+        padding: 10px 10px 0 10px;
+        min-height: 36px;
+        gap: 6px;
+    }
+    .menu-dropdown-title {
+        font-size: 1.01rem;
+        margin-right: 6px;
+    }
+    .menu-dropdown-price {
+        font-size: 0.98rem;
+    }
+    .menu-dropdown-desc {
+        font-size: 0.93rem;
+        margin: 6px 10px 12px 10px;
+        padding-top: 5px;
+    }
+}
+@media (max-width: 600px) {
+    .menu-dropdown-item {
+        padding: 10px 7px 8px 10px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+    .menu-dropdown-title {
+        font-size: 1.01rem;
+    }
+    .menu-dropdown-price {
+        font-size: 0.98rem;
+        padding: 3px 10px;
+        min-width: 44px;
+    }
+    .menu-dropdown-desc {
+        font-size: 0.93rem;
+    }
 }
 </style>
 <script>
@@ -611,6 +1154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { card: 'tatlilar-card', menu: 'tatlilar-menu' },
         { card: 'icecekler-card', menu: 'icecekler-menu' }
     ];
+    const iletisimSection = document.getElementById('iletisim-alani');
     cardMenuMap.forEach(function(pair) {
         var card = document.getElementById(pair.card);
         var menu = document.getElementById(pair.menu);
@@ -626,7 +1170,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Sadece ilgili menüyü aç
                 menu.style.display = 'block';
                 card.classList.add('active');
+                // Menü başlığına scroll (sadece 'Ulaş Balıkçılık Menü' başlığına)
+                var menuTitle = Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.includes('Ulaş Balıkçılık Menü'));
+                if(menuTitle) {
+                    menuTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                // Menü açıldığında iletişim alanı aşağıya kaymalı
+                if(iletisimSection) {
+                    // Açık menü yüksekliğini bul
+                    setTimeout(function() {
+                        let openMenu = null;
+                        cardMenuMap.forEach(function(pair2) {
+                            var m = document.getElementById(pair2.menu);
+                            if(m && m.style.display === 'block') openMenu = m;
+                        });
+                        if(openMenu) {
+                            const menuRect = openMenu.getBoundingClientRect();
+                            const menuBottom = menuRect.bottom + window.scrollY;
+                            const iletisimRect = iletisimSection.getBoundingClientRect();
+                            const iletisimTop = iletisimRect.top + window.scrollY;
+                            if(menuBottom > iletisimTop - 24) {
+                                iletisimSection.style.marginTop = (menuBottom - iletisimTop + 32) + 'px';
+                            } else {
+                                iletisimSection.style.marginTop = '';
+                            }
+                        } else {
+                            iletisimSection.style.marginTop = '';
+                        }
+                    }, 200);
+                }
             });
+        }
+    });
+    // Menü kapandığında iletişim alanı eski haline gelsin
+    document.addEventListener('click', function(e) {
+        if(!e.target.closest('.menu-card')) {
+            if(iletisimSection) iletisimSection.style.marginTop = '';
         }
     });
 });
