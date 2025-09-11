@@ -6,6 +6,8 @@
     <title>Ulaş Balıkçılık</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
     <style>
     .mobile-menu {
         display: none;
@@ -207,7 +209,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background: #f7fbfd;">
     <header style="background: #232323; color: #fff; padding: 1.2rem 0;">
         <div class="header-flex">
             <span class="header-reserve">Rezarvasyonlarınız için: <strong>(0539) 958 1843</strong></span>
@@ -238,10 +240,33 @@
         </div>
     </div>
         <!-- Hakkımızda Alanı Başlangıç -->
-        <section id="hakkimizda" style="max-width: 800px; margin: 0.7rem auto 0 auto; background: transparent; padding: 0; display: flex; flex-direction: column; align-items: center;">
-            <div style="width: 100%; max-width: 600px; margin: 0 auto;">
-                <h2 style="color: #0d47a1; font-size: 1rem; font-weight: 600; letter-spacing: 0.2px; margin-bottom: 0.3rem; text-align: center; font-family: 'Inter', Arial, sans-serif;">Hakkımızda</h2>
-                <p style="color: #232323; font-size: 0.91rem; line-height: 1.45; text-align: center; font-family: 'Inter', Arial, sans-serif; margin: 0 0 0.2rem 0; font-weight: 400;">
+        <section id="hakkimizda" style="max-width: 700px; margin: 1.1rem auto 0 auto; background: #fff; border: 1.5px solid #e3eaf5; border-radius: 18px; box-shadow: 0 4px 18px rgba(13,71,161,0.06); padding: 1.7rem 1.2rem 1.3rem 1.2rem; display: flex; flex-direction: column; align-items: center;">
+            <style>
+            #hakkimizda.modern-oval {
+                position: relative;
+                overflow: hidden;
+            }
+            #hakkimizda.modern-oval::before {
+                content: '';
+                position: absolute;
+                left: -38px;
+                top: 30px;
+                width: 80px;
+                height: 120px;
+                background: radial-gradient(ellipse 60% 40% at 60% 50%, #e3eaf5 80%, #b3d0f7 0%, transparent 100%);
+                opacity: 0.45;
+                z-index: 0;
+                pointer-events: none;
+            }
+            #hakkimizda.modern-oval > * {
+                position: relative;
+                z-index: 1;
+            }
+            </style>
+            <h2 style="color: #0d47a1; font-size: 2.1rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 0.18rem; text-align: center; font-family: 'Dancing Script', cursive;">Hakkımızda</h2>
+            <div style="width: 48px; height: 3px; background: linear-gradient(90deg, #0d47a1 60%, #e3eaf5 100%); border-radius: 2px; margin-bottom: 0.45rem;"></div>
+            <div style="width: 100%; max-width: 520px; margin: 0 auto;">
+                <p style="color: #232323; font-size: 0.99rem; line-height: 1.6; text-align: center; font-family: 'Inter', Arial, sans-serif; margin: 0 0 0.2rem 0; font-weight: 400;">
                     Ulaş Balıkçılık olarak taze ve lezzetli deniz ürünlerini, sıcak bir aile ortamında sizlerle buluşturuyoruz. Yılların tecrübesiyle, her damak zevkine uygun menümüz ve güler yüzlü ekibimizle hizmetinizdeyiz. Müşteri memnuniyetini ön planda tutarak, hijyen ve kalite standartlarından asla ödün vermiyoruz. Balık sofralarının vazgeçilmez adresi olmaktan gurur duyuyoruz.
                 </p>
             </div>
