@@ -460,10 +460,13 @@
 /* Menü Grid/Kart Tasarımı - Görsel odaklı ve estetik */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 22px;
     margin: 32px 0 0 0;
     justify-items: center;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
 }
 .menu-card {
     background: linear-gradient(135deg, #f7fbfd 60%, #e3eaf5 100%);
@@ -507,19 +510,51 @@
     box-shadow: 0 1px 6px rgba(0,0,0,0.08);
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .menu-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
         gap: 12px;
+        padding-bottom: 8px;
+        margin-left: -8px;
+        margin-right: -8px;
+        width: 100vw;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        align-items: stretch;
+        scrollbar-width: thin;
+        scrollbar-color: #e3eaf5 #f7fbfd;
     }
     .menu-card {
-        min-width: 90px;
-        min-height: 80px;
+        min-width: 140px;
+        min-height: 120px;
+        max-width: 160px;
+        flex: 0 0 70vw;
+        margin: 0 0 0 0;
         padding: 10px 2px 6px 2px;
+        border-radius: 18px;
     }
     .menu-card-title {
         font-size: 1.05rem;
         padding: 2px 6px;
+    }
+    /* Scrollbar görünümü */
+    .menu-grid::-webkit-scrollbar {
+        height: 8px;
+        background: #f7fbfd;
+    }
+    .menu-grid::-webkit-scrollbar-thumb {
+        background: #e3eaf5;
+        border-radius: 8px;
     }
 }
 /* Açılır menü stilleri */
