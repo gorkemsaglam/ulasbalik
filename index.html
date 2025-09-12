@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <!-- FontAwesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600&family=Oswald:wght@700&family=Quicksand:wght@700&family=Archivo+Black&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -329,7 +331,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     Ulaş Balıkçılık olarak taze ve lezzetli deniz ürünlerini, sıcak bir aile ortamında sizlerle buluşturuyoruz. Yılların tecrübesiyle, her damak zevkine uygun menümüz ve güler yüzlü ekibimizle hizmetinizdeyiz. Müşteri memnuniyetini ön planda tutarak, hijyen ve kalite standartlarından asla ödün vermiyoruz. Balık sofralarının vazgeçilmez adresi olmaktan gurur duyuyoruz.
                 </p>
             </div>
+
         </section>
+
+</body>
+
     <!-- Hakkımızda Alanı Bitiş -->
     <div style="max-width: 700px; margin: 32px auto 0 auto; text-align: center;">
         <h2 style="color: #0d47a1; font-size: 2.1rem; font-weight: 600; letter-spacing: 0.5px; margin: 0 0 0.18rem 0; text-align: center; font-family: 'Dancing Script', cursive;">Ulaş Balıkçılık Menü</h2>
@@ -700,29 +706,29 @@ document.addEventListener('DOMContentLoaded', function() {
         <!-- Modern İletişim Alanı Başlangıç -->
         <section id="iletisim-alani" class="iletisim-section">
             <div class="iletisim-container">
-                <h2 class="iletisim-title"><i class="fa-solid fa-paper-plane"></i> İletişim</h2>
+                <h2 class="iletisim-title">İletişim</h2>
                 <div class="iletisim-divider"></div>
                 <div class="iletisim-content">
-                    <div class="iletisim-info">
                         <div class="iletisim-row">
-                                            <span class="iletisim-label"><i class="fa-solid fa-location-dot"></i> Adres</span>
-                            <span class="iletisim-value">Yalı Mah. Sahil Cad. No:12, 61200 Ortahisar/Trabzon</span>
+                            <span class="iletisim-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <a class="iletisim-value" href="https://www.google.com/maps/dir/?api=1&destination=Kuloğlu,+Liva+Sk.+No:15/A,+34433+Beyoğlu/İstanbul" target="_blank">Kuloğlu, Liva Sk. No: 15/A, 34433 Beyoğlu/İstanbul</a>
                         </div>
                         <div class="iletisim-row">
-                                            <span class="iletisim-label"><i class="fa-solid fa-phone"></i> Telefon</span>
-                            <a class="iletisim-value" href="tel:+904622223344">(0462) 222 33 44</a>
+                            <span class="iletisim-icon"><i class="fa-solid fa-phone"></i></span>
+                            <a class="iletisim-value" href="tel:+902124342502">(0212) 434 25 02</a>
                         </div>
-                        <div class="iletisim-row iletisim-row-email">
-                                            <span class="iletisim-label"><i class="fa-solid fa-envelope"></i> E-posta</span>
-                            <a class="iletisim-value" href="mailto:ulasbalikcilik@gmail.com">ulasbalikcilik@gmail.com</a>
+                        <div class="iletisim-row">
+                            <span class="iletisim-icon"><i class="fa-brands fa-instagram"></i></span>
+                            <a class="iletisim-value" href="https://instagram.com/ulasbalik_restaurant" target="_blank">@ulasbalik_restaurant</a>
                         </div>
-                                        <div class="iletisim-row iletisim-row-instagram">
-                                            <span class="iletisim-label"><i class="fa-brands fa-instagram"></i> Instagram</span>
-                                            <a class="iletisim-value" href="https://instagram.com/ulasbalikcilik" target="_blank">@ulasbalikcilik</a>
-                                        </div>
+                        <div class="iletisim-row">
+                            <span class="iletisim-icon"><i class="fa-regular fa-clock"></i></span>
+                            <span class="iletisim-value">11:00 - 02:00</span>
+                        </div>
+                        </div>
                     </div>
                     <div class="iletisim-map">
-                        <iframe src="https://www.google.com/maps?q=Yalı+Mah.+Sahil+Cad.+No:12,+Ortahisar,+Trabzon&output=embed" width="100%" height="180" style="border:0; border-radius:16px; box-shadow:0 2px 16px rgba(13,71,161,0.10);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps?q=Kuloğlu,+Liva+Sk.+No:15/A,+34433+Beyoğlu/İstanbul&z=17&output=embed" width="100%" height="260" style="border:0; border-radius:16px; box-shadow:0 2px 16px rgba(13,71,161,0.10);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -772,46 +778,60 @@ document.addEventListener('DOMContentLoaded', function() {
         .iletisim-row {
             display: flex;
             flex-direction: row;
-            gap: 8px;
             align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
             font-size: 1.13rem;
             background: none;
             border-radius: 0;
-            padding: 6px 0 6px 0;
+            padding: 7px 0 7px 0;
             margin-bottom: 0;
             box-shadow: none;
             border: none;
-            align-items: center;
-            font-size: 1.13rem;
-            background: #f7fbfd;
-            border-radius: 10px;
-            padding: 8px 14px;
-            margin-bottom: 2px;
-            box-shadow: 0 2px 8px rgba(13,71,161,0.04);
+            font-family: 'Inter', Arial, sans-serif;
+            min-height: 36px;
         }
-        .iletisim-row-email {
-            margin-bottom: 0;
+        .iletisim-icon {
+            font-size: 1.25em;
+            color: #0d47a1;
+            min-width: 28px;
+            text-align: center;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .iletisim-label {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            align-items: center;
-            font-size: 1.13rem;
-            background: #f7fbfd;
-            border-radius: 10px;
-            padding: 6px 10px 6px 10px;
-            margin-bottom: 0;
-            box-shadow: 0 2px 8px rgba(13,71,161,0.04);
+            font-weight: 700;
+            color: #0d47a1;
+            min-width: 90px;
+            font-size: 1.08em;
+            letter-spacing: 0.2px;
+            display: inline-block;
+            flex-shrink: 0;
+            text-align: left;
+        }
+        .iletisim-value {
+            color: #232323;
             font-weight: 500;
             text-decoration: none;
             transition: color 0.18s;
             font-size: 1.05em;
-            word-break: break-all;
+            word-break: break-word;
+            display: inline-block;
+            flex: 1 1 0;
+            text-align: left;
         }
         .iletisim-value:hover {
             color: #1565c0;
             text-decoration: underline;
+        }
+        .iletisim-info {
+            flex: 1 1 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            justify-content: center;
         }
         .iletisim-map {
             flex: 1 1 220px;
@@ -831,6 +851,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 max-width: 100%;
                 min-width: 0;
             }
+            .iletisim-label {
+                min-width: 70px;
+            }
+            .iletisim-row {
+                gap: 10px;
+            }
         }
         @media (max-width: 600px) {
             .iletisim-section {
@@ -838,7 +864,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 border-radius: 12px;
             }
             .iletisim-title {
-                font-size: 1.45rem;
+                font-size: 1.15rem;
             }
             .iletisim-divider {
                 width: 32px;
@@ -854,7 +880,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             .iletisim-row {
                 font-size: 0.98rem;
-                padding: 6px 7px;
+                padding: 6px 2px;
+                gap: 6px;
+            }
+            .iletisim-label {
+                min-width: 54px;
             }
         }
         /* FontAwesome CDN */
@@ -1141,121 +1171,278 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }
 </style>
-<script>
-// Her kart tıklandığında sadece ilgili menü açılır, diğerleri kapanır
-document.addEventListener('DOMContentLoaded', function() {
-    const cardMenuMap = [
-        { card: 'tavalar-card', menu: 'tavalar-menu' },
-        { card: 'izgaralar-card', menu: 'izgaralar-menu' },
-        { card: 'corbalar-card', menu: 'corbalar-menu' },
-        { card: 'ekmek-card', menu: 'ekmek-menu' },
-        { card: 'salatalar-card', menu: 'salatalar-menu' },
-        { card: 'mezeler-card', menu: 'mezeler-menu' },
-        { card: 'tatlilar-card', menu: 'tatlilar-menu' },
-        { card: 'icecekler-card', menu: 'icecekler-menu' }
-    ];
-    const iletisimSection = document.getElementById('iletisim-alani');
-    cardMenuMap.forEach(function(pair) {
-        var card = document.getElementById(pair.card);
-        var menu = document.getElementById(pair.menu);
-        if(card && menu) {
-            card.addEventListener('click', function() {
-                // Tüm menüleri kapat
-                cardMenuMap.forEach(function(other) {
-                    var otherMenu = document.getElementById(other.menu);
-                    var otherCard = document.getElementById(other.card);
-                    if(otherMenu) otherMenu.style.display = 'none';
-                    if(otherCard) otherCard.classList.remove('active');
-                });
-                // Sadece ilgili menüyü aç
-                menu.style.display = 'block';
-                card.classList.add('active');
-                // Menü başlığına scroll (sadece 'Ulaş Balıkçılık Menü' başlığına)
-                var menuTitle = Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.includes('Ulaş Balıkçılık Menü'));
-                if(menuTitle) {
-                    menuTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                // Menü açıldığında iletişim alanı aşağıya kaymalı
-                if(iletisimSection) {
-                    // Açık menü yüksekliğini bul
-                    setTimeout(function() {
-                        let openMenu = null;
-                        cardMenuMap.forEach(function(pair2) {
-                            var m = document.getElementById(pair2.menu);
-                            if(m && m.style.display === 'block') openMenu = m;
-                        });
-                        if(openMenu) {
-                            const menuRect = openMenu.getBoundingClientRect();
-                            const menuBottom = menuRect.bottom + window.scrollY;
-                            const iletisimRect = iletisimSection.getBoundingClientRect();
-                            const iletisimTop = iletisimRect.top + window.scrollY;
-                            if(menuBottom > iletisimTop - 24) {
-                                iletisimSection.style.marginTop = (menuBottom - iletisimTop + 32) + 'px';
-                            } else {
-                                iletisimSection.style.marginTop = '';
+
+  <!-- İletişim Altı Yeni Bölüm -->
+
+
+        <section id="iletisim-alt-bolum" style="max-width:700px; margin:38px auto 0 auto; background:#fff; border:none; border-radius:18px; box-shadow:0 4px 18px rgba(13,71,161,0.06); padding:1.2rem 1.2rem 1.5rem 1.2rem; display:flex; flex-direction:column; align-items:center;">
+            <h2 style="color:#0d47a1; font-size:1.5rem; font-weight:700; letter-spacing:0.5px; margin:0 0 0.18rem 0; text-align:center; font-family:'Archivo Black','Oswald',Arial,sans-serif;">Müşteri Yorumlarımız</h2>
+            <div style="width:100%; max-width:620px; height:3px; background:linear-gradient(90deg,#0d47a1 60%,#e3eaf5 100%); border-radius:2px; margin:0.18rem auto 1.1rem auto;"></div>
+            <div id="yorum-slider" style="width:100%; max-width:620px; min-height:260px; margin:0 auto; position:relative; display:flex; align-items:center; justify-content:center;">
+                <!-- Yorum Kartları -->
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:block; opacity:1; transition:opacity 0.7s, transform 0.7s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Sabiha B.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Atmosferi, temizliği, dekoru, çalışanları ve elbette lezzetli balıkları ile tercih edilebilecek güzel bir balık restoranı. Ayrıca yemek sonunda rebulun birbirinden güzel kolonyalarını deneyebilirsiniz☺️balık sonrası güzel bir detay👌</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Merve Ö.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Gece saat 1 gibi gittik. Tavada istavrit yedik gerçekten çok taze ve harika pişmişti yap çekmeden. Ayrıca bizimle ilgilenen genç bir beyefendi vardı gerçekten çok nazik kibar ve içtendi. İçeri girdiğimizde heryer parlıyordu gayet temizdi. Her gittiğimizde memnun ayrılıyoruz. Elinize sağlık.</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Ebru T.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Ulaş Balık, Cihangir’de ulaşımı kolaylıkla sağlanabilecek bir konumda nefis balık seçenekleri sunan , ferah bir ortama sahip sıcak bir aile işletmesi. Balık ziyafeti çekmek isteyenler için tam bir lezzet noktası. İşletmenin paket servisi de bulunuyor. Eviniz de ya da istediğiniz yerde zahmetsiz balık keyfi yapabilirsiniz. Taze salatalarını belirtmemek haksızlık olur. Masaya geçmek için biz beklemedik . Betül hanım , Bahar Hanım , Sedat Bey ve diğer ekibe teşekkürlerimi sunmak isterim.</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Bilge Kağan K.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Deniz ürünleri çok güzeldi. Bir çok türü denedim. Servis çok hızlıydı ve personel çok samimiydi. Tam bir Beyoğlu’na yakışacak bir restaurant tavsiye ederim.</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Görkem S.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Ziyaret ettiğim en temiz, en lezzetli ve en samimi restorandı. Bütün balıkları şahane. Bahar Ablamın ellerine sağlık. 🤍</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Alattin A.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.7rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Hamsiyi çok güzel pişmişti. Bir tabak ağzına kadar roka doluydu. Sahipleri gayet nazik ve samimiydi. Teşekkürler.</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-top:auto; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <!-- Otomatik sliderda tuş yok -->
+            </div>
+            </section>
+
+            <script>
+            // Menü açma kapama kodu
+            document.addEventListener('DOMContentLoaded', function() {
+                // Menü kart açma kodları ...
+                const cardMenuMap = [
+                    { card: 'tavalar-card', menu: 'tavalar-menu' },
+                    { card: 'izgaralar-card', menu: 'izgaralar-menu' },
+                    { card: 'corbalar-card', menu: 'corbalar-menu' },
+                    { card: 'ekmek-card', menu: 'ekmek-menu' },
+                    { card: 'salatalar-card', menu: 'salatalar-menu' },
+                    { card: 'mezeler-card', menu: 'mezeler-menu' },
+                    { card: 'tatlilar-card', menu: 'tatlilar-menu' },
+                    { card: 'icecekler-card', menu: 'icecekler-menu' }
+                ];
+                const iletisimSection = document.getElementById('iletisim-alani');
+                cardMenuMap.forEach(function(pair) {
+                    var card = document.getElementById(pair.card);
+                    var menu = document.getElementById(pair.menu);
+                    if(card && menu) {
+                        card.addEventListener('click', function() {
+                            // Tüm menüleri kapat
+                            cardMenuMap.forEach(function(other) {
+                                var otherMenu = document.getElementById(other.menu);
+                                var otherCard = document.getElementById(other.card);
+                                if(otherMenu) otherMenu.style.display = 'none';
+                                if(otherCard) otherCard.classList.remove('active');
+                            });
+                            // Sadece ilgili menüyü aç
+                            menu.style.display = 'block';
+                            card.classList.add('active');
+                            // Menü başlığına scroll (sadece 'Ulaş Balıkçılık Menü' başlığına)
+                            var menuTitle = Array.from(document.querySelectorAll('h2')).find(h2 => h2.textContent.includes('Ulaş Balıkçılık Menü'));
+                            if(menuTitle) {
+                                menuTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
                             }
+                            // Menü açıldığında iletişim alanı aşağıya kaymalı
+                            if(iletisimSection) {
+                                setTimeout(function() {
+                                    let openMenu = null;
+                                    cardMenuMap.forEach(function(pair2) {
+                                        var m = document.getElementById(pair2.menu);
+                                        if(m && m.style.display === 'block') openMenu = m;
+                                    });
+                                    if(openMenu) {
+                                        const menuRect = openMenu.getBoundingClientRect();
+                                        const menuBottom = menuRect.bottom + window.scrollY;
+                                        const iletisimRect = iletisimSection.getBoundingClientRect();
+                                        const iletisimTop = iletisimRect.top + window.scrollY;
+                                        if(menuBottom > iletisimTop - 24) {
+                                            iletisimSection.style.marginTop = (menuBottom - iletisimTop + 32) + 'px';
+                                        } else {
+                                            iletisimSection.style.marginTop = '';
+                                        }
+                                    } else {
+                                        iletisimSection.style.marginTop = '';
+                                    }
+                                }, 200);
+                            }
+                        });
+                    }
+                });
+                // Menü kapandığında iletişim alanı eski haline gelsin
+                document.addEventListener('click', function(e) {
+                    if(!e.target.closest('.menu-card')) {
+                        if(iletisimSection) iletisimSection.style.marginTop = '';
+                    }
+                });
+            });
+
+            // Müşteri yorumları slider kodu (otomatik, tuşsuz)
+            document.addEventListener('DOMContentLoaded', function() {
+                const yorumKartlar = document.querySelectorAll('#yorum-slider .yorum-kart');
+                let aktifYorum = 0;
+                let animating = false;
+                let sliderInterval = null;
+
+                function gosterYorum(index, direction) {
+                    if(animating) return;
+                    animating = true;
+                    yorumKartlar.forEach(function(kart, i) {
+                        if(i === index) {
+                            kart.style.display = 'flex';
+                            setTimeout(function() {
+                                kart.style.opacity = '1';
+                                kart.style.transform = direction === 'left' ? 'translateX(-30px)' : direction === 'right' ? 'translateX(30px)' : 'translateX(0)';
+                                setTimeout(function() {
+                                    kart.style.transform = 'translateX(0)';
+                                    animating = false;
+                                }, 600);
+                            }, 10);
                         } else {
-                            iletisimSection.style.marginTop = '';
+                            kart.style.opacity = '0';
+                            kart.style.transform = direction === 'left' ? 'translateX(30px)' : direction === 'right' ? 'translateX(-30px)' : 'translateX(0)';
+                            setTimeout(function() {
+                                kart.style.display = 'none';
+                            }, 600);
                         }
-                    }, 200);
+                    });
+                }
+
+                function sonrakiYorum() {
+                    if(animating) return;
+                    aktifYorum = (aktifYorum + 1) % yorumKartlar.length;
+                    gosterYorum(aktifYorum, 'right');
+                }
+
+                // Otomatik başlat
+                gosterYorum(0);
+                sliderInterval = setInterval(sonrakiYorum, 4200);
+            });
+
+            // Açılışta animasyon için (göz yormayan fade-in)
+            window.addEventListener('DOMContentLoaded', function() {
+                setTimeout(function() {
+                    var hero = document.querySelector('.hero-headline-anim');
+                    if(hero) {
+                        hero.style.opacity = '1';
+                        hero.style.transform = 'translateY(0)';
+                    }
+                }, 100);
+            });
+
+            // Hamburger menü scripti
+            window.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector('.hamburger');
+                const mobileMenu = document.getElementById('mobileMenu');
+                const subHeader = document.querySelector('.sub-header');
+                const heroSection = document.getElementById('heroSection');
+
+                function getSubHeaderBottom() {
+                    const rect = subHeader.getBoundingClientRect();
+                    return rect.bottom + window.scrollY;
+                }
+
+                function openMenu() {
+                    mobileMenu.classList.add('open');
+                    mobileMenu.style.top = getSubHeaderBottom() + 'px';
+                    heroSection.style.marginTop = '220px';
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeMenu() {
+                    mobileMenu.classList.remove('open');
+                    heroSection.style.marginTop = '0';
+                    document.body.style.overflow = '';
+                }
+                if(hamburger && mobileMenu && subHeader && heroSection) {
+                    hamburger.addEventListener('click', function() {
+                        if (mobileMenu.classList.contains('open')) {
+                            closeMenu();
+                        } else {
+                            openMenu();
+                        }
+                    });
+                    mobileMenu.querySelectorAll('a').forEach(function(link) {
+                        link.addEventListener('click', closeMenu);
+                    });
+                    window.addEventListener('resize', function() {
+                        if (mobileMenu.classList.contains('open')) {
+                            mobileMenu.style.top = getSubHeaderBottom() + 'px';
+                        }
+                    });
                 }
             });
-        }
-    });
-    // Menü kapandığında iletişim alanı eski haline gelsin
-    document.addEventListener('click', function(e) {
-        if(!e.target.closest('.menu-card')) {
-            if(iletisimSection) iletisimSection.style.marginTop = '';
-        }
-    });
-});
-</script>
-<script>
-// Açılışta animasyon için (göz yormayan fade-in)
-window.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-        document.querySelector('.hero-headline-anim').style.opacity = '1';
-        document.querySelector('.hero-headline-anim').style.transform = 'translateY(0)';
-    }, 100);
-});
-</script>
-</html>
-<script>
-const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-const subHeader = document.querySelector('.sub-header');
-const heroSection = document.getElementById('heroSection');
-
-function getSubHeaderBottom() {
-    const rect = subHeader.getBoundingClientRect();
-    return rect.bottom + window.scrollY;
-}
-
-function openMenu() {
-    mobileMenu.classList.add('open');
-    mobileMenu.style.top = getSubHeaderBottom() + 'px';
-    heroSection.style.marginTop = '220px';
-    document.body.style.overflow = 'hidden';
-}
-function closeMenu() {
-    mobileMenu.classList.remove('open');
-    heroSection.style.marginTop = '0';
-    document.body.style.overflow = '';
-}
-hamburger.addEventListener('click', function() {
-    if (mobileMenu.classList.contains('open')) {
-        closeMenu();
-    } else {
-        openMenu();
-    }
-});
-mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
-window.addEventListener('resize', function() {
-    if (mobileMenu.classList.contains('open')) {
-        mobileMenu.style.top = getSubHeaderBottom() + 'px';
-    }
-});
-</script>
-</html>
+            </script>
+        </body>
+        </html>
