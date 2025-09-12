@@ -706,7 +706,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <!-- Modern İletişim Alanı Başlangıç -->
         <section id="iletisim-alani" class="iletisim-section">
             <div class="iletisim-container">
-                <h2 class="iletisim-title">İletişim</h2>
+                <h2 class="iletisim-title" style="font-family: 'Dancing Script', cursive; font-size: 2.1rem; font-weight: 600; letter-spacing: 0.5px;">İletişim</h2>
                 <div class="iletisim-divider"></div>
                 <div class="iletisim-content">
                         <div class="iletisim-row">
@@ -725,12 +725,99 @@ document.addEventListener('DOMContentLoaded', function() {
                             <span class="iletisim-icon"><i class="fa-regular fa-clock"></i></span>
                             <span class="iletisim-value">11:00 - 02:00</span>
                         </div>
-                        </div>
+                </div>
+                <div class="iletisim-map">
+                    <iframe src="https://www.google.com/maps?q=Kuloğlu,+Liva+Sk.+No:15/A,+34433+Beyoğlu/İstanbul&z=17&output=embed" width="100%" height="260" style="border:0; border-radius:16px; box-shadow:0 2px 16px rgba(13,71,161,0.10);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+    <section id="iletisim-alt-bolum" style="max-width:700px; margin:0 auto 0 auto; background:#fff; border:none; border-radius:18px; box-shadow:0 4px 18px rgba(13,71,161,0.06); padding:1.2rem 1.2rem 1.5rem 1.2rem; display:flex; flex-direction:column; align-items:center; margin-bottom:0; text-align:center;">
+            <h2 style="color:#0d47a1; font-size:2.1rem; font-weight:600; letter-spacing:0.5px; margin:0 0 0.18rem 0; text-align:center; font-family:'Dancing Script', cursive; width:100%; display:flex; justify-content:center; align-items:center;">Son Müşteri Yorumlarımız</h2>
+            <div style="width:70px; height:3px; background:#0d47a1; border-radius:2px; margin:0.18rem auto 1.1rem auto;"></div>
+            <div id="yorum-slider" style="width:100%; max-width:620px; min-height:260px; margin:0 auto; position:relative; display:flex; align-items:center; justify-content:center; text-align:center;">
+                <!-- Yorum Kartları -->
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:block; opacity:1; transition:opacity 0.7s, transform 0.7s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Sabiha B.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
                     </div>
-                    <div class="iletisim-map">
-                        <iframe src="https://www.google.com/maps?q=Kuloğlu,+Liva+Sk.+No:15/A,+34433+Beyoğlu/İstanbul&z=17&output=embed" width="100%" height="260" style="border:0; border-radius:16px; box-shadow:0 2px 16px rgba(13,71,161,0.10);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; text-align:center; padding:0 2px;">Atmosferi, temizliği, dekoru, çalışanları ve elbette lezzetli balıkları ile tercih edilebilecek güzel bir balık restoranı. Ayrıca yemek sonunda rebulun birbirinden güzel kolonyalarını deneyebilirsiniz☺️balık sonrası güzel bir detay👌</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
                     </div>
                 </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Merve Ö.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; text-align:center; padding:0 2px;">Gece saat 1 gibi gittik. Tavada istavrit yedik gerçekten çok taze ve harika pişmişti yağ çekmeden. Ayrıca bizimle ilgilenen genç bir beyefendi vardı gerçekten çok nazik kibar ve içtendi. Her gittiğimizde memnun ayrılıyoruz. Elinize sağlık.</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Bilge Kağan K.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; text-align:center; padding:0 2px;">Deniz ürünleri çok güzeldi. Bir çok türü denedim. Servis çok hızlıydı ve personel çok samimiydi. Tam bir Beyoğlu’na yakışacak bir restaurant tavsiye ederim.</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Görkem S.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; text-align:center; padding:0 2px;">Ziyaret ettiğim en temiz, en lezzetli ve en samimi restorandı. Bütün balıkları şahane. Bahar Ablamın ellerine sağlık. 🤍</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
+                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Alattin A.</span>
+                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
+                    </div>
+                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
+                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
+                    </div>
+                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; text-align:center; padding:0 2px;">Hamsiyi çok güzel pişmişti. Bir tabak ağzına kadar roka doluydu. Sahipleri gayet nazik ve samimiydi. Teşekkürler.</div>
+                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
+                    </div>
+                </div>
+                <!-- Otomatik sliderda tuş yok -->
             </div>
         </section>
         <style>
@@ -1151,6 +1238,44 @@ document.addEventListener('DOMContentLoaded', function() {
         margin: 6px 10px 12px 10px;
         padding-top: 5px;
     }
+    /* Yorum kartı mobil ve masaüstü tam ortalama */
+    #yorum-slider .yorum-kart {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    #yorum-slider .yorum-kart > div {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100%;
+        text-align: center !important;
+    }
+    #yorum-slider .yorum-kart span {
+        text-align: center !important;
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        justify-content: center !important;
+        display: flex !important;
+    }
+}
+/* Masaüstü için de tam ortalama */
+#yorum-slider .yorum-kart {
+    align-items: center !important;
+    text-align: center !important;
+}
+#yorum-slider .yorum-kart > div {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100%;
+    text-align: center !important;
+}
+#yorum-slider .yorum-kart span {
+    text-align: center !important;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-content: center !important;
+    display: flex !important;
 }
 @media (max-width: 600px) {
     .menu-dropdown-item {
@@ -1175,110 +1300,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- İletişim Altı Yeni Bölüm -->
 
 
-        <section id="iletisim-alt-bolum" style="max-width:700px; margin:38px auto 0 auto; background:#fff; border:none; border-radius:18px; box-shadow:0 4px 18px rgba(13,71,161,0.06); padding:1.2rem 1.2rem 1.5rem 1.2rem; display:flex; flex-direction:column; align-items:center;">
-            <h2 style="color:#0d47a1; font-size:1.5rem; font-weight:700; letter-spacing:0.5px; margin:0 0 0.18rem 0; text-align:center; font-family:'Archivo Black','Oswald',Arial,sans-serif;">Müşteri Yorumlarımız</h2>
-            <div style="width:100%; max-width:620px; height:3px; background:linear-gradient(90deg,#0d47a1 60%,#e3eaf5 100%); border-radius:2px; margin:0.18rem auto 1.1rem auto;"></div>
-            <div id="yorum-slider" style="width:100%; max-width:620px; min-height:260px; margin:0 auto; position:relative; display:flex; align-items:center; justify-content:center;">
-                <!-- Yorum Kartları -->
-                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:block; opacity:1; transition:opacity 0.7s, transform 0.7s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
-                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Sabiha B.</span>
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
-                    </div>
-                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
-                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
-                    </div>
-                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Atmosferi, temizliği, dekoru, çalışanları ve elbette lezzetli balıkları ile tercih edilebilecek güzel bir balık restoranı. Ayrıca yemek sonunda rebulun birbirinden güzel kolonyalarını deneyebilirsiniz☺️balık sonrası güzel bir detay👌</div>
-                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                    </div>
-                </div>
-                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
-                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Merve Ö.</span>
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
-                    </div>
-                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
-                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
-                    </div>
-                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Gece saat 1 gibi gittik. Tavada istavrit yedik gerçekten çok taze ve harika pişmişti yap çekmeden. Ayrıca bizimle ilgilenen genç bir beyefendi vardı gerçekten çok nazik kibar ve içtendi. İçeri girdiğimizde heryer parlıyordu gayet temizdi. Her gittiğimizde memnun ayrılıyoruz. Elinize sağlık.</div>
-                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                    </div>
-                </div>
-                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
-                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Ebru T.</span>
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
-                    </div>
-                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
-                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
-                    </div>
-                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Ulaş Balık, Cihangir’de ulaşımı kolaylıkla sağlanabilecek bir konumda nefis balık seçenekleri sunan , ferah bir ortama sahip sıcak bir aile işletmesi. Balık ziyafeti çekmek isteyenler için tam bir lezzet noktası. İşletmenin paket servisi de bulunuyor. Eviniz de ya da istediğiniz yerde zahmetsiz balık keyfi yapabilirsiniz. Taze salatalarını belirtmemek haksızlık olur. Masaya geçmek için biz beklemedik . Betül hanım , Bahar Hanım , Sedat Bey ve diğer ekibe teşekkürlerimi sunmak isterim.</div>
-                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                    </div>
-                </div>
-                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
-                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Bilge Kağan K.</span>
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
-                    </div>
-                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
-                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
-                    </div>
-                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Deniz ürünleri çok güzeldi. Bir çok türü denedim. Servis çok hızlıydı ve personel çok samimiydi. Tam bir Beyoğlu’na yakışacak bir restaurant tavsiye ederim.</div>
-                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                    </div>
-                </div>
-                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
-                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Görkem S.</span>
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
-                    </div>
-                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
-                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
-                    </div>
-                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.32rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Ziyaret ettiğim en temiz, en lezzetli ve en samimi restorandı. Bütün balıkları şahane. Bahar Ablamın ellerine sağlık. 🤍</div>
-                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-bottom:0.12rem; width:100%;">
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                    </div>
-                </div>
-                <div class="yorum-kart" style="background:#fff; border:none; border-radius:14px; box-shadow:none; padding:1.1rem 1.1rem 1.1rem 1.1rem; margin-bottom:0; display:none; opacity:0; transition:opacity 1.1s, transform 1.1s; position:absolute; left:0; top:0; width:100%; min-height:240px; max-height:240px; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
-                    <div style="display:flex; align-items:center; justify-content:center; width:100%; margin-bottom:0.18rem; gap:10px;">
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#e3eaf5 0%,#0d47a1 100%); max-width:60px; border-radius:1px;"></div>
-                        <span style="font-weight:600; color:#0d47a1; font-size:1.01rem; letter-spacing:0.1px; text-align:center; min-width:90px;">Alattin A.</span>
-                        <div style="flex:1; height:1.5px; background:linear-gradient(90deg,#0d47a1 0%,#e3eaf5 100%); max-width:60px; border-radius:1px;"></div>
-                    </div>
-                    <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:0.18rem;">
-                        <span style="color:#FFD600; font-size:1.08rem; letter-spacing:1px; display:inline-block; text-align:center;">★★★★★</span>
-                    </div>
-                    <div style="font-style:italic; color:#232323; font-size:0.93rem; line-height:1.55; margin-bottom:0.7rem; width:100%; max-width:520px; min-height:70px; max-height:70px; overflow-y:auto; text-align:center; padding:0 2px;">Hamsiyi çok güzel pişmişti. Bir tabak ağzına kadar roka doluydu. Sahipleri gayet nazik ve samimiydi. Teşekkürler.</div>
-                    <div style="display:flex; justify-content:center; gap:1.2rem; margin-top:auto; width:100%;">
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Yiyecek: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Hizmet: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                        <span style="color:#0d47a1; font-weight:600; font-size:0.93rem;">Atmosfer: <span style="color:#232323; font-weight:500;">5/5</span></span>
-                    </div>
-                </div>
-                <!-- Otomatik sliderda tuş yok -->
-            </div>
-            </section>
+
 
             <script>
             // Menü açma kapama kodu
